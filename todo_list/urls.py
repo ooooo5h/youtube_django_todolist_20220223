@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('base.urls')),
+    path('', include('base.urls')),  # 브라우저에서 인터넷주소를 쳤을 때 접근할 수 있는 주소를 생성했고, 
+                                    # 작동시킬 내용은 base폴더의 urls.py 내부에 적힌 규칙에 따라 페이지를 이동시킨다
 ]

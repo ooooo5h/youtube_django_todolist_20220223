@@ -2,6 +2,7 @@ from django.urls import path
 from .views import TaskList, TaskDetail, TaskCreate, TaskUpdate, DeleteView, CustomLoginView, RegisterPage
 from django.contrib.auth.views import LogoutView
 
+# 이 아래의 규칙들에 따라 이동함!
 urlpatterns = [
     path('login/', CustomLoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
