@@ -41,7 +41,7 @@ class RegisterPage(FormView):
 
 class TaskList(LoginRequiredMixin, ListView):
     model = Task
-    context_object_name = 'tasks'
+    context_object_name = 'tasks'   # 여기서 만든 tasks랑 동일해야하는건가..? 그리고 참고할 .html파일도 만들어야함
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
