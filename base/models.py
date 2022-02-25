@@ -11,7 +11,7 @@ class Task(models.Model):
     complete = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     
-    def __str__(self):
+    def __str__(self):   # 자기자신을 어떻게 표현할건지? title로 표현하겠다.
         return self.title
     
     class Meta:
