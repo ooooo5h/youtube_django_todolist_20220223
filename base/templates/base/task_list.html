@@ -30,6 +30,13 @@
                 <div class="task-complete-icon"></div>
                 <i><s><a href="{%url 'task-update' task.id %}">{{task}}</a></s></i>
             </div>
+
+            {%else%}
+            <div class="task-title">
+                <div class="task-complete-icon"></div>
+                <a href="{%url 'task-update' task.id %}">{{task}}</a>
+            </div>
+
             {%endif%}
         </div>
     {%empty%}
